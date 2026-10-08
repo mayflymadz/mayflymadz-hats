@@ -1,0 +1,50 @@
+:root {
+  /* Main colors */
+  --primary: #003b49;
+  --accent: #f2c75c;
+
+  /* Page */
+  --background: #ffffff;
+  --text: #003b49;
+
+  /* Navigation */
+  --nav-background: var(--primary);
+  --nav-text: var(--accent);
+  --nav-title-text: var(--accent);
+  --nav-hover-background: var(--accent);
+  --nav-hover-text: var(--primary);
+}
+
+[data-theme="dark"] {
+  /* Main colors */
+  --primary: #f2c75c;
+  --accent: #003b49;
+
+  /* Page */
+  --background: #003b49;
+  --text: #f2c75c;
+
+  /* Navigation */
+  --nav-background: var(--primary);
+  --nav-text: var(--accent);
+  --nav-title-text: var(--accent);
+  --nav-hover-background: var(--accent);
+  --nav-hover-text: var(--primary);
+}
+
+[data-theme="light"] {
+  /* Main colors */
+  --primary: #003b49;
+  --accent: #f2c75c;
+
+  /* Page */
+  --background: #ffffff;
+  --text: #003b49;
+
+  /* Navigation */
+  --nav-background: var(--primary);
+  --nav-text: var(--accent);
+  --nav-title-text: var(--accent);
+  --nav-hover-background: var(--accent);
+  --nav-hover-text: var(--primary);
+}

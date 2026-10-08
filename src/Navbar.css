@@ -1,0 +1,163 @@
+*,
+::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  height: 80px;
+  width: 100%;
+  border-radius: 10px;
+  background: var(--nav-background);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 15px 20px -5px;
+}
+
+.nav--list {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.nav--title {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--nav-title-text);
+  padding: 0 20px;
+}
+
+.nav--toggle {
+  /* display: none; */
+  position: relative;
+  z-index: 20;
+  width: 200px;
+  height: 40px;
+  padding: 8px;
+  border: 2px solid var(--nav-text);
+  background: transparent;
+  cursor: pointer;
+  overflow: hidden;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: var(--nav-text);
+  z-index: 10;
+  text-decoration: none;
+  transition: color 200ms ease;
+}
+
+.nav--toggle span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin: 5px 0;
+  background: var(--nav-text);
+  transition: transform 200ms ease, opacity 200ms ease;
+}
+
+.nav--toggle:hover {
+  background: var(--nav-hover-background);
+}
+
+.nav--toggle:hover span {
+  background: var(--nav-hover-text);
+}
+
+.nav--toggle::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  transform: skew(30deg);
+  background: var(--nav-hover-background);
+  transition: width 400ms ease;
+}
+
+.nav--toggle:hover::before {
+  width: 120%;
+}
+
+.hamburger {
+    display: flex;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+.item {
+  position: relative;
+  width: 140px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  user-select: none;
+  cursor: pointer;
+  margin: 0 30px;
+  border: 2px solid var(--nav-text);
+  overflow: hidden;
+}
+
+.item a {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: var(--nav-text);
+  z-index: 10;
+  text-decoration: none;
+  transition: color 200ms ease;
+}
+
+.item:hover a {
+  color: var(--nav-hover-text);
+}
+
+.item:before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  transform: skew(30deg);
+  background: var(--nav-hover-background);
+  transition: width 400ms ease;
+}
+
+.item:hover:before {
+  width: 120%;
+}
+
+.item:nth-child(2):before {
+  transform: skew(-20deg);
+}
+
+.item:nth-child(3):before {
+  transform: skew(0deg);
+}
+
+.item:nth-child(4):before {
+  width: 180px;
+  height: 0%;
+  bottom: 0px;
+  transition: height 400ms ease;
+}
+
+.item:nth-child(4):hover:before {
+  height: 100%;
+}
