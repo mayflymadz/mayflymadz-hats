@@ -1,11 +1,15 @@
 :root {
   /* Main colors */
-  --primary: #003b49;
+  --primary: #0c7d99;
   --accent: #f2c75c;
 
   /* Page */
   --background: #ffffff;
   --text: #003b49;
+
+  /* Divider */
+  --divider: #a43e3e;
+  --card-background: #fffdf7;
 
   /* Navigation */
   --nav-background: var(--primary);
@@ -24,22 +28,9 @@
   --background: #003b49;
   --text: #f2c75c;
 
-  /* Navigation */
-  --nav-background: var(--primary);
-  --nav-text: var(--accent);
-  --nav-title-text: var(--accent);
-  --nav-hover-background: var(--accent);
-  --nav-hover-text: var(--primary);
-}
-
-[data-theme="light"] {
-  /* Main colors */
-  --primary: #003b49;
-  --accent: #f2c75c;
-
-  /* Page */
-  --background: #ffffff;
-  --text: #003b49;
+  /* Divider */
+  --divider: #000000;
+  --card-background: #0b2c34;
 
   /* Navigation */
   --nav-background: var(--primary);

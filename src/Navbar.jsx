@@ -1,14 +1,14 @@
 import { Link } from 'react-router-dom';
-import {useState} from 'react';
+import { useState, useEffect, useRef } from 'react';
 import './Navbar.css';
 import './theme.css';
-import { ChefHat } from 'lucide-react';
+import { ChefHat, HardHat, MicVocal, Guitar, Dices } from 'lucide-react';
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(0);
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = (index) => {
-    setIsOpen(!isOpen);
+    setIsOpen(prev => !prev);
   }
 
   return (
@@ -16,23 +16,34 @@ export default function Navbar() {
         <nav>
             <ul className="nav--list">
 
-                <button className="nav--toggle ${isOpen ? 'open' : ''}" onClick={toggleMenu}>
-                    Hats <ChefHat/>
-                </button>
-                
-                <div className="nav--title"> mayflymadz </div>
+                <li>
+                    <button  className={`nav--toggle ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
+                        <ChefHat size={40}/>
+                    </button>
+                </li>
 
-                <li className="item">
-                    <Link to="/">Home</Link>
-                </li>
-                <li className="item">
-                    <Link to="/about">About</Link>
-                </li>
-                <li className="item">
-                    <Link to="/services">Services</Link>
-                </li>
-                <li className="item">
-                    <Link to="/contact">Contact</Link>
+
+                { isOpen && (
+                    <ul className="nav--menu">
+                        <li className="item">
+                            <Link to="/">Home</Link>
+                        </li>
+                        <li className="item">
+                            <Link to="/developer"> <HardHat/> Developer</Link>
+                        </li>
+                        <li className="item">
+                            <Link to="/voiceactor"> <MicVocal/> Voice Actor</Link>
+                        </li>
+                        <li className="item">
+                            <Link to="/musician"> <Guitar/> Musician</Link>
+                        </li>
+                        <li className="item">
+                            <Link to="/ttrpg"> <Dices/> Game Master</Link>
+                        </li>
+                    </ul>
+                )}
+                <li>
+                    <div className="nav--title"> mayflymadz </div>
                 </li>
             </ul>
         </nav>
