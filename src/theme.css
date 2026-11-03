@@ -1,7 +1,7 @@
 :root {
   /* Main colors */
-  --primary: #0c7d99;
-  --accent: #f2c75c;
+  --primary: #034f62;
+  --accent: #efa1e2;
   --accent-2: #a43e84;
 
   /* Page */
@@ -9,7 +9,7 @@
   --text: #003b49;
 
   /* Divider */
-  --divider: #a43e3e;
+  --divider: #efa1e2;
   --card-background: #fffdf7;
 
   /* Navigation */
@@ -27,12 +27,12 @@
   --accent-2: #e5439a;
 
   /* Page */
-  --background: #003b49;
+  --background: #00262f;
   --text: #f2c75c;
 
   /* Divider */
   --divider: #000000;
-  --card-background: #0b2c34;
+  --card-background: #003b49;
 
   /* Navigation */
   --nav-background: var(--primary);
