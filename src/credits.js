@@ -4,7 +4,7 @@ const credits = [
     project: 'Skyrim Follower Mod',
     role: 'Vaermina',
     description: 'Supporting role in a Skyrim Follower Mod, Red Hand Raime',
-    url: 'https://www.nexusmods.com/skyrimspecialedition/mods/194842',
+    url: 'https://www.youtube.com/watch?v=k_oYqZt3zC0',
     status: 'Released',
   },
   {
