@@ -17,6 +17,12 @@ const samples = [
     title: 'Fantasy Character Voices',
     description: 'A SELF PRODUCED selection of some character voices I can do.',
     src: '/audio/fantasy_char.mp3',
+  },
+  {
+    id: 'narration',
+    title: 'Narration',
+    description: 'A clip of a narration audition I did.',
+    src: '/audio/youtube.mp3',
   }
 ]
 
