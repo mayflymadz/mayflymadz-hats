@@ -11,6 +11,11 @@ const contact = {
     {
       label: "YouTube",
       url: "https://www.youtube.com/@EmporiumoftheRatGod",
+    },
+
+    {
+      label: "BlueSky",
+      url: "https://bsky.app/profile/mayflymadz.bsky.social",
     }
 
   ]
