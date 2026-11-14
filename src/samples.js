@@ -23,6 +23,12 @@ const samples = [
     title: 'Narration',
     description: 'A clip of a narration audition I did.',
     src: '/audio/youtube.mp3',
+  },
+  {
+    id: 'studio',
+    title: 'RAW Studio Recording',
+    description: 'Raw audio from my studio, no post processing or editing.',
+    src: '/audio/madison_beazer_home_studio.wav',
   }
 ]
 
