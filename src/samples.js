@@ -28,7 +28,7 @@ const samples = [
     id: 'studio',
     title: 'RAW Studio Recording',
     description: 'Raw audio from my studio, no post processing or editing.',
-    src: '/audio/madison_beazer_home_studio.wav',
+    src: '/audio/madison_beazer_home_studio.mp3',
   }
 ]
 
