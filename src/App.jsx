@@ -3,7 +3,7 @@ import './App.css'
 import './va.css'
 import Navbar from './Navbar'
 import { useEffect, useState } from 'react'
-import { Sun, Moon } from 'lucide-react'
+import { Sun, Moon, Download } from 'lucide-react'
 import credits from './credits'
 import samples from './samples'
 import about from './about'
@@ -24,8 +24,11 @@ function App() {
 
   return (
     <div className="App">
+      <a className="skip-link" href="#main-content">
+        Skip to main content
+      </a>
 
-      <main className="va">
+      <main id="main-content" className="va" tabIndex="-1">
         <section id="home" className="va__main">
 
           <button 
@@ -67,14 +70,26 @@ function App() {
                   {sample.description}
                 </p>
 
-                <audio
-                  controls
-                  className="va__sample-audio"
-                  preload="metadata"
-                >
-                  <source src={sample.src} type="audio/mpeg" />
-                  Your browser does not support audio playback.
-                </audio>
+                <div className="va__sample-controls">
+                  <audio
+                    controls
+                    className="va__sample-audio"
+                    preload="metadata"
+                  >
+                    <source src={sample.src} type="audio/mpeg" />
+                    Your browser does not support audio playback.
+                  </audio>
+
+                  <a
+                    className="va__sample-download"
+                    href={sample.src}
+                    download={`${sample.id}.mp3`}
+                    aria-label={`Download ${sample.title}`}
+                  >
+                    <Download aria-hidden="true" />
+                    <span>Download</span>
+                  </a>
+                </div>
               </article>
             ))}
           </div>

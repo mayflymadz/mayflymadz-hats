@@ -1,161 +1,115 @@
-*,
-::before,
-*::after {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
 .container {
-  width: 100vw;
-  min-height: 100vh;
-  display: flex;
-  justify-content: left;
-  align-items: left;
+  position: relative;
+  z-index: 20;
+  width: 100%;
 }
 
-nav {
+.container nav {
+  position: relative;
   display: flex;
-  justify-content: center;
+  min-height: 4.5rem;
   align-items: center;
-  padding: 10px 20px;
-  height: 80px;
-  width: 100%;
-  border-radius: 0;
+  padding: 0.5rem 1rem;
   background: var(--nav-background);
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 15px 20px -5px;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 20%);
 }
 
 .nav--list {
-  width: 100%;
-  list-style: none;
   display: flex;
-  justify-content: flex-start;
+  width: 100%;
   align-items: center;
+  gap: 1rem;
+  list-style: none;
 }
 
 .nav--title {
-  font-size: 24px;
-  font-weight: bold;
+  margin-left: auto;
+  padding: 0.25rem 0.5rem;
   color: var(--nav-title-text);
-  padding: 0 20px;
+  font-size: clamp(1.1rem, 4vw, 1.5rem);
+  font-weight: 700;
 }
 
 .nav--toggle {
-  display: flex;
+  display: inline-flex;
+  width: 2.75rem;
+  height: 2.75rem;
   align-items: center;
   justify-content: center;
-  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
   color: var(--nav-text);
-  outline: none;
-  border: none;
+  background: transparent;
   cursor: pointer;
-  box-shadow: none;
-  transition: background 200ms ease, color 200ms ease;
-}
-
-.nav--toggle span {
-  display: block;
-  width: 100%;
-  height: 2px;
-  margin: 5px 0;
-  background: var(--nav-text);
-  transition: transform 200ms ease, opacity 200ms ease;
+  transition: background 180ms ease, color 180ms ease;
 }
 
 .nav--toggle:hover {
+  color: var(--nav-hover-text);
   background: var(--nav-hover-background);
-}
-
-.nav--toggle:hover span {
-  background: var(--nav-hover-text);
 }
 
 .nav--menu {
   position: absolute;
-  top: 80px;
-  left: 0;
-  width: 30%;
-  background: var(--nav-background);
+  top: calc(100% + 0.25rem);
+  left: 0.75rem;
   display: flex;
+  width: min(24rem, calc(100vw - 1.5rem));
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 20px;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 15px 20px -5px;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  border: 1px solid var(--divider);
+  border-radius: 0.75rem;
+  background: var(--nav-background);
+  box-shadow: 0 0.75rem 1.5rem rgb(0 0 0 / 25%);
+  list-style: none;
 }
 
-.nav--menu a {
-  font-size: 16px;
-  text-transform: uppercase;
-  color: var(--nav-text);
-  z-index: 10;
-  text-decoration: none;
-  transition: color 200ms ease;
+.nav--menu[hidden] {
+  display: none;
 }
-
-.nav--menu a:hover {
-  color: var(--nav-hover-text);
-}
-
-.hamburger {
-    display: flex;
-    cursor: pointer;
-    background: transparent;
-    border: none;
-    flex-direction: column;
-    gap: 5px;
-}
-
 
 .item {
-  position: relative;
-  width: 100%;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  user-select: none;
-  cursor: pointer;
-  margin: 0 30px;
-  border: 2px solid var(--nav-text);
-  overflow: hidden;
+  min-width: 0;
+  border: 1px solid var(--nav-text);
+  border-radius: 0.4rem;
+  list-style: none;
 }
 
 .item a {
-  font-size: 16px;
-  text-transform: uppercase;
+  display: flex;
+  min-height: 2.75rem;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.75rem;
+  padding: 0.5rem 0.75rem;
   color: var(--nav-text);
-  z-index: 10;
+  font-size: 1rem;
   text-decoration: none;
-  transition: color 200ms ease;
-
+  transition: color 180ms ease, background 180ms ease;
 }
 
-.item:hover a {
+.item a:hover {
   color: var(--nav-hover-text);
-}
-
-.item:before {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 100%;
-  transform: skew(30deg);
   background: var(--nav-hover-background);
-  transition: width 400ms ease;
 }
 
-.item:hover:before {
-  width: 120%;
+.item a svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex: 0 0 auto;
 }
 
-.item:nth-child(2):before {
-  transform: skew(-20deg);
+@media (max-width: 30rem) {
+  .container nav {
+    padding-inline: 0.75rem;
+  }
 }
 
-.item:nth-child(3):before {
-  transform: skew(0deg);
+@media (forced-colors: active) {
+  .nav--toggle,
+  .nav--menu,
+  .item {
+    border: 1px solid ButtonText;
+  }
 }
