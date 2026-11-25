@@ -122,8 +122,8 @@
   padding: 0.65rem 1rem;
   border: 1px solid var(--divider);
   border-radius: 999px;
-  color: var(--primary);
-  background: var(--accent);
+  color: var(--button-foreground);
+  background: var(--button-background);
   font-size: 0.875rem;
   font-weight: 600;
   text-decoration: none;
@@ -132,8 +132,8 @@
 }
 
 .va__sample-download:hover {
-  color: var(--accent);
-  background: var(--primary);
+  color: var(--button-hover-foreground);
+  background: var(--button-hover-background);
   transform: translateY(-1px);
 }
 
@@ -205,15 +205,15 @@
   padding: 0;
   border: 1px solid var(--divider);
   border-radius: 50%;
-  color: var(--primary);
-  background: var(--accent);
+  color: var(--button-foreground);
+  background: var(--button-background);
   cursor: pointer;
   transition: transform 180ms ease, background 180ms ease;
 }
 
 .theme-toggle:hover {
-  background: var(--primary);
-  color: var(--accent);
+  background: var(--button-hover-background);
+  color: var(--button-hover-foreground);
   transform: scale(1.05);
 }
 

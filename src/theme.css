@@ -7,6 +7,10 @@
   --text: #003b49;
   --divider: #efa1e2;
   --card-background: #fffdf7;
+  --button-background: var(--accent);
+  --button-foreground: var(--primary);
+  --button-hover-background: var(--primary);
+  --button-hover-foreground: var(--accent);
 
   --nav-background: var(--primary);
   --nav-text: var(--accent);
@@ -24,6 +28,10 @@
   --text: #f2c75c;
   --divider: #000000;
   --card-background: #003b49;
+  --button-background: var(--accent-2);
+  --button-foreground: #00262f;
+  --button-hover-background: var(--primary);
+  --button-hover-foreground: #00262f;
 
   --nav-background: var(--primary);
   --nav-text: var(--accent);
